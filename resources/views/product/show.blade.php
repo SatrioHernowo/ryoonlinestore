@@ -11,8 +11,7 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">
-          {{ $viewData["product"]->getName() }} (<span class="price-tag">{{ $viewData["product"]->getPrice() }}</span>)
-        </h5>
+{{ $viewData["product"]->getName() }} (<span class="price-tag">{{ $viewData["product"]->getPrice() }}</span>)        </h5>
         <p class="card-text">{{ $viewData["product"]->getDescription() }}</p>
 
         <!-- ⬇️ BAGIAN BARU DITAMBAHKAN DI SINI ⬇️ -->

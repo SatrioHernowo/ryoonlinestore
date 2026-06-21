@@ -3,10 +3,30 @@
   "framework": null,
   "outputDirectory": "public",
   "functions": {
-    "api/index.php": { "runtime": "vercel-php@0.9.0" }
+    "api/index.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/", "dest": "/api/index.php" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/api/index.php" },
+    {
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.ico"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/public/robots.txt"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
+    }
   ],
   "env": {
     "APP_CONFIG_CACHE": "/tmp/config.php",
