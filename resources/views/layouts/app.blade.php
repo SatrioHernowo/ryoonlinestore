@@ -8,18 +8,30 @@
   <title>@yield('title', 'Online Store')</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-4">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">Online Store</a>
-      <div class="collapse navbar-collapse">
+      <a class="navbar-brand" href="{{ route('home.index') }}">Online Store</a>
+
+      <!-- Tombol hamburger, muncul di layar kecil (HP) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarMain" aria-controls="navbarMain"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
         <div class="navbar-nav ms-auto">
           <a class="nav-link active" href="{{ route('home.index') }}">Home</a>
           <a class="nav-link active" href="{{ route('product.index') }}">Products</a>
           <a class="nav-link active" href="{{ route('home.about') }}">About</a>
-          <a class="nav-link active" href="{{ route('cart.index') }}">Cart</a>
 
           @auth
-          <a class="nav-link active" href="{{ route('order.index') }}">My orders</a>
+            @if(Route::has('cart.index'))
+              <a class="nav-link active" href="{{ route('cart.index') }}">Cart</a>
+            @endif
+            @if(Route::has('order.index'))
+              <a class="nav-link active" href="{{ route('order.index') }}">My orders</a>
+            @endif
             @if(Auth::user()->getRole() == 'admin')
               <a class="nav-link active" href="{{ route('admin.home.index') }}">Admin</a>
             @endif
