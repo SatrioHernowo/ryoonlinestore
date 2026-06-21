@@ -17,7 +17,7 @@
             <tr>
               <td>{{ $item->product->getName() }}</td>
               <td>{{ $item->getQuantity() }}</td>
-              <td>${{ $item->getPrice() }}</td>
+              <td><span class="price-tag">{{ $item->getPrice() }}</span></td>
             </tr>
           @endforeach
         </tbody>

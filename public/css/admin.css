@@ -1,0 +1,91 @@
+:root {
+  --navy: #0B1E3D;
+  --navy-light: #16306099;
+  --blue: #2F6FED;
+  --cyan: #38BDF8;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #F4F7FB;
+}
+
+.copyright {
+  background-color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.fixed {
+  flex: 0 0 250px;
+  background-color: var(--navy) !important;
+  border-right: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.content-grey {
+  background-color: #F4F7FB;
+}
+
+.img-profile {
+  height: 2rem;
+  width: 2rem;
+}
+
+.profile-font {
+  color: #93A4C3 !important;
+  font-size: 80%;
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+
+.fixed .nav-link {
+  color: #C7D5EE !important;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.15rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.fixed .nav-link:hover {
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #fff !important;
+}
+
+.card {
+  border: 1px solid #E6ECF5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(11, 30, 61, 0.05);
+}
+
+.card-header {
+  background-color: var(--navy) !important;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 500;
+  border-bottom: none !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+}
+
+.btn-primary, .bg-primary {
+  background-color: var(--blue) !important;
+  border-color: var(--blue) !important;
+}
+
+.btn-primary:hover {
+  background-color: #1E4FC4 !important;
+}
+
+.table thead {
+  background-color: #EEF3FC;
+  font-family: var(--font-display);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #EAF2FF;
+}

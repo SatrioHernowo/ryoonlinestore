@@ -16,7 +16,7 @@
           <tr>
             <td>{{ $product->getId() }}</td>
             <td>{{ $product->getName() }}</td>
-            <td>${{ $product->getPrice() }}</td>
+            <td><span class="price-tag">{{ $product->getPrice() }}</span></td>
             <td>{{ session('products')[$product->getId()] }}</td>
           </tr>
         @endforeach
